@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Résistances de Polarisation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calculateur d'oscillateur a trois cellules (Rc-C) a transistor bipolaire. Par Benahmed Nasreddine, Univ. Tlemcen, Algerie. </h2>
+        <p>Entrez les valeurs de Vcc, Beta, Icq et la frequence d'oscillation f0 desiree (Ici R=Rc).</p>
+        <div class="input-group">
+            <label for="vcc">Tension d'alimentation (Vcc) :</label>
+            <input type="number" id="vcc" step="0.01" placeholder="Vcc en volts">
+        </div>
+        <div class="input-group">
+            <label for="beta">Gain en courant Beta du transistor :</label>
+            <input type="number" id="beta" step="0.01" placeholder="Beta">
+        </div>
+        <div class="input-group">
+            <label for="icq">Courant de polarisation (Icq) du transistor :</label>
+            <input type="number" id="icq" step="0.01" placeholder="Icq en amperes">
+        </div>
+        <div class="input-group">
+            <label for="f0">Frequence d'oscillation (f0) :</label>
+            <input type="number" id="f0" step="0.01" placeholder="f0 en Hz">
+        </div>
+        <div class="buttons">
+            <button onclick="calculateResistances()">CALCULER</button>
+            <button onclick="resetFields()">REINITIALISER</button>
+        </div>
+        <div id="results"></div>
+        <div class="figure">
+            <img src="circuit.png" alt="SCHEMA ELECTRONIQUE DE L'OSCILLATEUR">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
